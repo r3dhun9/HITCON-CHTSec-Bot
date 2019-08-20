@@ -1,25 +1,78 @@
-<p align="center"><img height="188" width="198" src="https://botman.io/img/botman.png"></p>
-<h1 align="center">BotMan Studio</h1>
+<p align="center"><img height="188" width="198" src="https://i.imgur.com/Lga8QZU.jpg"></p>
+<h1 align="center">HITCON-CHTSec-Botman</h1>
 
-## About BotMan Studio
+> **This is a guideline about creating your own chatbot on facebook**
+> **Author : Redhung aka r3dhun9**
+>**Contact :**[Philip Chen (Facebook)](https://www.facebook.com/philip.chen.581)
+## Installation (PHP >= 7.1.3)
 
-While BotMan itself is framework agnostic, BotMan is also available as a bundle with the great [Laravel](https://laravel.com) PHP framework. This bundled version is called BotMan Studio and makes your chatbot development experience even better. By providing testing tools, an out of the box web driver implementation and additional tools like an enhanced CLI with driver installation, class generation and configuration support, it speeds up the development significantly.
+```bash=
+composer global require laravel/installer
 
-## Documentation
+composer global require "botman/installer"
 
-You can find the BotMan and BotMan Studio documentation at [http://botman.io](http://botman.io).
+composer create-project --prefer-dist botman/studio <directory>
 
-## Support the development
-**Do you like this project? Support it by donating**
+php artisan botman:install-driver facebook
+```
 
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=m%2epociot%40googlemail%2ecom&lc=CY&item_name=BotMan&no_note=0&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest)
-- Patreon: [Donate](https://www.patreon.com/botman)
+## Guideline - Step 1
+First, create your own page on facebook.
 
-## Security Vulnerabilities
+![](https://i.imgur.com/9S6yQmv.png)
 
-If you discover a security vulnerability within BotMan or BotMan Studio, please send an e-mail to Marcel Pociot at m.pociot@gmail.com. All security vulnerabilities will be promptly addressed.
+And then go to this website to login.
 
-## License
+![](https://i.imgur.com/zCJRops.png)
 
-BotMan is free software distributed under the terms of the MIT license.
+Press the button to create your app and input your name.
+
+![](https://i.imgur.com/EneXzil.png)
+
+![](https://i.imgur.com/utCU2Lt.png)
+
+Press "基本資料" and fill in the blanks.
+
+> Notice: You can use https://www.privacypolicies.com/ to create a privacy page.
+> Notice2: You can use https://ngrok.com/ to create a domain with **php artisan serve**.
+
+![](https://i.imgur.com/esZ11bT.png)
+![](https://i.imgur.com/fFgn2jo.png)
+
+Press "+" button next to the "產品", and press "設定".
+
+![](https://i.imgur.com/hN90wsn.png)
+
+Add your own page.
+
+![](https://i.imgur.com/U5HqEaO.png)
+
+## Guideline - Step 2
+Let's go back to our botman directory.
+
+Edit **.env** and add these parameters below :
+
+![](https://i.imgur.com/QMfrefo.png)
+
+Press "產生權杖" to access your FACEBOOK_TOKEN :
+
+![](https://i.imgur.com/DAZkEre.png)
+
+Press "基本資料" and "顯示" to access your FACEBOOK_APP_SECRET :
+
+![](https://i.imgur.com/VqAXM5h.png)
+
+Last, enter your specific FACEBOOK_VERIFICATION to **.env** and go back to edit the **webhook**.
+
+> Notice: We must add **/botman** after the url to call our chatbot.
+
+![](https://i.imgur.com/slMKjhB.png)
+
+![](https://i.imgur.com/moCivsP.png)
+
+Okay, let's turn up the button and have fun !
+
+![](https://i.imgur.com/eMm7XYe.png)
+
+![](https://i.imgur.com/8F32O1d.jpg)
 
