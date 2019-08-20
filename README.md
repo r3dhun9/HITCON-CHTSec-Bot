@@ -37,9 +37,11 @@ Press the button to create your app and input your name.
 Press "基本資料" and fill in the blanks.
 
 > Notice: You can use https://www.privacypolicies.com/ to create a privacy page.
+
 > Notice2: You can use https://ngrok.com/ to create a domain with **php artisan serve**.
 
 ![](https://i.imgur.com/esZ11bT.png)
+
 ![](https://i.imgur.com/fFgn2jo.png)
 
 Press "+" button next to the "產品", and press "設定".
